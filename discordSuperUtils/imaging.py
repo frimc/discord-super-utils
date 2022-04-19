@@ -183,7 +183,7 @@ class ImageManager:
         mask = Image.new("RGBA", card.size, 0)
         ImageDraw.Draw(mask).ellipse(location, fill=(255, 25, 255, 255))
 
-        avatar = (await self.convert_image(str(member.avatar_url))).resize(
+        avatar = (await self.convert_image(str(member.avatar.url))).resize(
             size_dimensions
         )
         profile_pic_holder = Image.new("RGBA", card.size, (255, 255, 255, 255))
